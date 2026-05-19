@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokématch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="site_header">
+    <h1>Pokématch</h1>
+    <div>
+      <img src="pikalogo.png" alt="Pikachu with the Pokemon logo">
+    </div>
+    <button id="theme_button">Dark</button>
+  </div>
+
+  <div id="content">
+    <div id="inner_box">
+
+      <div id="controls">
+        <div id="difficulty_group">
+          <button class="difficulty_button active" data-difficulty="easy">Easy</button>
+          <button class="difficulty_button" data-difficulty="medium">Medium</button>
+          <button class="difficulty_button" data-difficulty="hard">Hard</button>
+        </div>
+        <div id="action_group">
+          <button id="start_button">Start</button>
+          <button id="reset_button" disabled>Reset</button>
+          <button id="peek_button" disabled>Peek</button>
+        </div>
+      </div>
+
+      <div id="status_bar">
+        <div class="stat">
+          <div class="stat_label">Time</div>
+          <div class="stat_value" id="timer">--</div>
+        </div>
+        <div class="stat">
+          <div class="stat_label">Clicks</div>
+          <div class="stat_value" id="clicks">0</div>
+        </div>
+        <div class="stat">
+          <div class="stat_label">Matched</div>
+          <div class="stat_value" id="matched">0</div>
+        </div>
+        <div class="stat">
+          <div class="stat_label">Pairs Left</div>
+          <div class="stat_value" id="pairs_left">0</div>
+        </div>
+        <div class="stat">
+          <div class="stat_label">Total</div>
+          <div class="stat_value" id="total">0</div>
+        </div>
+        <div class="stat">
+          <div class="stat_label">Peeks</div>
+          <div class="stat_value" id="peeks">3</div>
+        </div>
+      </div>
+
+      <div id="game_area">
+        <div id="game_grid"></div>
+        <div id="overlay" class="hidden">
+          <h2 id="overlay_title"></h2>
+          <p id="overlay_message"></p>
+          <button id="overlay_button">Play Again</button>
+        </div>
+      </div>
+
+      <div id="loading" class="hidden">Loading Pokemon...</div>
+
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
